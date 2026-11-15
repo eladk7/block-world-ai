@@ -109,8 +109,6 @@ def execute(holder: dict, cancel_event: threading.Event,
 
 if "job" not in st.session_state:
     st.session_state.job = None
-if "step_index" not in st.session_state:
-    st.session_state.step_index = 0
 
 st.markdown("Stacks are entered **bottom to top**. Use `|` between stacks and commas between blocks.")
 st.info("Example: initial `D,A,B,C`, goal `D | A,B,C`. The order of stacks on the table is irrelevant.")
@@ -161,7 +159,7 @@ def workspace() -> None:
                     "algorithm": algorithm,
                     "heuristic": heuristic_name,
                 }
-                st.session_state.step_index = 0
+                st.session_state.pop("step_slider", None)
                 thread.start()
                 st.rerun(scope="fragment")
 
@@ -218,17 +216,14 @@ def workspace() -> None:
     if result.status == "solved":
         maximum = len(result.moves)
         selected_step = st.slider("Walk through the solution", 0, maximum,
-                                  min(st.session_state.step_index, maximum), key="step_slider")
+                                  value=0, key="step_slider")
         back, forward = st.columns(2)
         with back:
-            if st.button("◀ Previous step", disabled=selected_step == 0):
-                st.session_state.step_index = selected_step - 1
-                st.rerun(scope="fragment")
+            st.button("◀ Previous step", disabled=selected_step == 0,
+                      on_click=lambda: st.session_state.update(step_slider=max(0, st.session_state.step_slider - 1)))
         with forward:
-            if st.button("Next step ▶", disabled=selected_step == maximum):
-                st.session_state.step_index = selected_step + 1
-                st.rerun(scope="fragment")
-        st.session_state.step_index = selected_step
+            st.button("Next step ▶", disabled=selected_step == maximum,
+                      on_click=lambda: st.session_state.update(step_slider=min(maximum, st.session_state.step_slider + 1)))
         display_state(result.states[selected_step], f"Step {selected_step} of {maximum}")
         if selected_step:
             move = result.moves[selected_step - 1]
