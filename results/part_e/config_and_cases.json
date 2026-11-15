@@ -1,0 +1,325 @@
+{
+  "seed": 20261115,
+  "sizes": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "pairs": 12,
+  "runs": 72,
+  "expansion_limit": 3000,
+  "timeout_seconds": 2.0,
+  "cases": [
+    {
+      "id": 1,
+      "n": 2,
+      "start": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "goal": [
+        [
+          "A"
+        ],
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "n": 3,
+      "start": [
+        [
+          "A"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "goal": [
+        [
+          "B",
+          "C",
+          "A"
+        ]
+      ]
+    },
+    {
+      "id": 3,
+      "n": 4,
+      "start": [
+        [
+          "D",
+          "B",
+          "A",
+          "C"
+        ]
+      ],
+      "goal": [
+        [
+          "A",
+          "B",
+          "D"
+        ],
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 4,
+      "n": 5,
+      "start": [
+        [
+          "A"
+        ],
+        [
+          "B"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "E"
+        ]
+      ],
+      "goal": [
+        [
+          "A"
+        ],
+        [
+          "C",
+          "B"
+        ],
+        [
+          "E",
+          "D"
+        ]
+      ]
+    },
+    {
+      "id": 5,
+      "n": 6,
+      "start": [
+        [
+          "D",
+          "A",
+          "E",
+          "B",
+          "F",
+          "C"
+        ]
+      ],
+      "goal": [
+        [
+          "A",
+          "E"
+        ],
+        [
+          "B",
+          "C",
+          "D"
+        ],
+        [
+          "F"
+        ]
+      ]
+    },
+    {
+      "id": 6,
+      "n": 7,
+      "start": [
+        [
+          "C",
+          "D",
+          "A"
+        ],
+        [
+          "F",
+          "B",
+          "E",
+          "G"
+        ]
+      ],
+      "goal": [
+        [
+          "D"
+        ],
+        [
+          "F",
+          "E",
+          "C",
+          "G",
+          "B",
+          "A"
+        ]
+      ]
+    },
+    {
+      "id": 7,
+      "n": 2,
+      "start": [
+        [
+          "A"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "goal": [
+        [
+          "B",
+          "A"
+        ]
+      ]
+    },
+    {
+      "id": 8,
+      "n": 3,
+      "start": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "C"
+        ]
+      ],
+      "goal": [
+        [
+          "B",
+          "C",
+          "A"
+        ]
+      ]
+    },
+    {
+      "id": 9,
+      "n": 4,
+      "start": [
+        [
+          "B",
+          "D",
+          "A",
+          "C"
+        ]
+      ],
+      "goal": [
+        [
+          "C"
+        ],
+        [
+          "D",
+          "B",
+          "A"
+        ]
+      ]
+    },
+    {
+      "id": 10,
+      "n": 5,
+      "start": [
+        [
+          "A",
+          "D",
+          "B",
+          "C",
+          "E"
+        ]
+      ],
+      "goal": [
+        [
+          "A"
+        ],
+        [
+          "B",
+          "D",
+          "E"
+        ],
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 11,
+      "n": 6,
+      "start": [
+        [
+          "A",
+          "F"
+        ],
+        [
+          "D",
+          "B",
+          "C",
+          "E"
+        ]
+      ],
+      "goal": [
+        [
+          "B",
+          "C",
+          "F"
+        ],
+        [
+          "D",
+          "A",
+          "E"
+        ]
+      ]
+    },
+    {
+      "id": 12,
+      "n": 7,
+      "start": [
+        [
+          "B",
+          "G"
+        ],
+        [
+          "F",
+          "A",
+          "D",
+          "C",
+          "E"
+        ]
+      ],
+      "goal": [
+        [
+          "A"
+        ],
+        [
+          "D",
+          "E",
+          "B",
+          "G"
+        ],
+        [
+          "F",
+          "C"
+        ]
+      ]
+    }
+  ],
+  "notes": [
+    "Generated counts states before duplicate checks.",
+    "Summary time and expansion averages include stopped runs.",
+    "Cost statistics include solved runs only.",
+    "A* max_frontier is priority queue size; IDA* is maximum DFS depth."
+  ]
+}
