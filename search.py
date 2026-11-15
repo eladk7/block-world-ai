@@ -79,7 +79,7 @@ def astar(start_stacks, goal_stacks, heuristic: Heuristic = h0, *,
                 continue  # ignore stale priority queue entries
             h = _heuristic(heuristic, state, goal)
             event = {"state": state, "g": g, "h": h, "f": f,
-                     "open_size": len(heap), "successors": []}
+                     "open_size": len(heap), "incoming_move": parents[state][1] if state in parents else None, "successors": []}
             if state == goal:  # goal checked on pop, not generation
                 result.moves, result.states = _reconstruct(start, goal, parents)
                 result.cost = g
