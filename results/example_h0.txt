@@ -1,0 +1,22 @@
+Block World AI — 4-block demonstration with h0=0
+Initial: (D,A,B,C)
+Goal: (D) (A,B,C)
+Environment: Python, local evaluation; runtime not included
+
+A*: solved, cost=5
+expanded=39, generated=177, max_frontier=33, iterations=0
+1. Move C from B to TABLE
+2. Move B from A to TABLE
+3. Move A from D to TABLE
+4. Move B from TABLE to A
+5. Move C from TABLE to B
+
+IDA*: solved, cost=5
+expanded=124, generated=630, max_frontier=7, iterations=6
+1. Move C from B to TABLE
+2. Move B from A to TABLE
+3. Move A from D to TABLE
+4. Move B from TABLE to A
+5. Move C from TABLE to B
+
+These figures are for a single example, not the final multi-case experiment.
