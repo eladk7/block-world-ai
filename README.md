@@ -5,7 +5,8 @@ Academic AI search and planning project for the Blocks World problem.
 ## Current status
 - **Part A**: State model, legal moves, input validation and canonicalization.
 - **Part B**: A* graph search and IDA* with the zero heuristic `h0`, execution limits, metrics and traces.
-- **Not yet implemented**: h1/h2 heuristics and proofs (Part C), interactive user interface (Part D), reproducible 12-case experiments and final report (Part E).
+- **Part C**: h1/h2 consistent, admissible heuristics, exhaustive 4-block property tests, Hebrew proofs.
+- **Not yet implemented**: interactive user interface (Part D), reproducible 12-case experiments and final report (Part E).
 
 ## Requirements
 Python 3.10+ (standard library only).
@@ -31,3 +32,7 @@ See `search.py`: `astar(start, goal)` and `ida_star(start, goal)`. Both return a
 - `results/example_h0.txt` — saved command-line example output
 
 No UI is available yet. A document for submission is being authored separately by the student.
+
+## Part C – heuristics
+
+Run `python demo_part_c.py` to compare h0/h1/h2 on the assignment example. Proofs: `docs/PART_C_HE.md`. Saved results: `results/example_heuristics.txt`.
